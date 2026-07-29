@@ -1,0 +1,114 @@
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.login-jp {
+  position: absolute;
+}
+
+.login-card {
+  width: min(420px, 90vw);
+  padding: 2.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  z-index: 1;
+  border-left: 3px solid var(--accent);
+  box-shadow: var(--shadow-neon);
+}
+
+.login-stamp {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+}
+
+.login-title {
+  font-size: 3.6rem;
+  margin: 0.4rem 0 0 0;
+}
+
+.login-sub {
+  margin: 0 0 1.4rem 0;
+}
+
+.login-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-dim);
+  margin-top: 0.8rem;
+}
+
+.login-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--border-color);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  padding: 0.5rem 0.2rem;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.login-input:focus {
+  border-bottom-color: var(--accent);
+}
+
+.login-error {
+  color: var(--accent);
+  font-size: 0.78rem;
+  margin: 0.6rem 0 0 0;
+}
+
+.login-btn {
+  margin-top: 1.6rem;
+  background: var(--accent);
+  color: var(--c-void);
+  border: none;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-display);
+  letter-spacing: 1.5px;
+  font-size: 0.95rem;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.login-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--accent-deep);
+}
+
+.login-hint {
+  margin-top: 1rem;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.shake {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-8px);
+  }
+  40% {
+    transform: translateX(8px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+}

@@ -1,0 +1,80 @@
+.members-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.4rem 4rem;
+  position: relative;
+}
+
+.members-jp {
+  font-size: 10rem;
+  top: -10px;
+  left: -10px;
+}
+
+.members-title {
+  font-size: 2.4rem;
+  margin: 0 0 0.2rem;
+}
+
+.members-sub {
+  margin: 0 0 2rem;
+}
+
+.members-table-wrap {
+  overflow-x: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.members-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.members-table th {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.68rem;
+  color: var(--accent);
+  padding: 0.9rem 1rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.members-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-dim);
+}
+
+.members-table tr:hover td {
+  color: var(--text-primary);
+  background: rgba(232, 16, 42, 0.05);
+}
+
+.members-code {
+  font-family: var(--font-stencil);
+  color: var(--text-primary);
+  letter-spacing: 1px;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+
+.status-active {
+  color: #3ddc84;
+}
+
+.status-mission {
+  color: var(--c-warn);
+}
+
+.status-away {
+  color: var(--text-dim);
+}

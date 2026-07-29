@@ -1,0 +1,19 @@
+.app-shell {
+  min-height: 100vh;
+  position: relative;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.app-main {
+  width: min(1200px, 100%);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+}
+
+@media (max-width: 992px) {
+  .app-main {
+    padding: 1rem 1rem 2.5rem;
+  }
+}

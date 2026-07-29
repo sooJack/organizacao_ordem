@@ -1,0 +1,47 @@
+:root {
+  /* --- Tipografia --- */
+  --font-display: 'Anton', 'Big Shoulders Stencil', sans-serif;
+  --font-stencil: 'Big Shoulders Stencil', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-jp: 'Noto Sans JP', sans-serif;
+
+  /* --- Paleta base (tema ESCURO / padrão) --- */
+  --c-void: #0a0a0a;
+  --c-void-2: #121012;
+  --c-red: #e8102a;
+  --c-red-deep: #7a0d1a;
+  --c-red-dim: #4a0b13;
+  --c-white: #f2efe6;
+  --c-white-dim: #b9b6ad;
+  --c-static: #4a4a4a;
+  --c-warn: #f5e642;
+
+  --bg-primary: var(--c-void);
+  --bg-secondary: var(--c-void-2);
+  --bg-card: #151315;
+  --text-primary: var(--c-white);
+  --text-dim: var(--c-white-dim);
+  --accent: var(--c-red);
+  --accent-deep: var(--c-red-deep);
+  --border-color: #2a2626;
+  --overlay-noise-opacity: 0.09;
+  --stamp-color: var(--c-warn);
+
+  --shadow-neon: 0 0 12px rgba(232, 16, 42, 0.55), 0 0 2px rgba(232, 16, 42, 0.9);
+  --transition-fast: 0.18s ease;
+  --transition-med: 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+[data-theme='light'] {
+  --bg-primary: #ece7da;
+  --bg-secondary: #e2ddce;
+  --bg-card: #f5f2e8;
+  --text-primary: #171412;
+  --text-dim: #55504a;
+  --accent: #c40d24;
+  --accent-deep: #8a0303;
+  --border-color: #cfc8b4;
+  --overlay-noise-opacity: 0.05;
+  --stamp-color: #8a5c00;
+  --shadow-neon: 0 0 10px rgba(196, 13, 36, 0.35);
+}

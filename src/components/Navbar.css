@@ -1,0 +1,85 @@
+.navbar {
+  background: var(--bg-secondary);
+  border-bottom: 2px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 1.4rem;
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.navbar-logo {
+  font-size: 1.6rem;
+}
+
+.navbar-stamp {
+  transform: rotate(-6deg);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+
+.navbar-logout {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  padding: 0.2rem 0.6rem;
+}
+
+.navbar-logout:hover {
+  background: var(--accent);
+  color: var(--c-void);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 0.2rem;
+  padding: 0 1.4rem 0.6rem;
+  border-top: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.navbar-link {
+  padding: 0.6rem 1rem 0.2rem;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.navbar-link:hover {
+  color: var(--text-primary);
+}
+
+.navbar-link.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}

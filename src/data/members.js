@@ -1,0 +1,51 @@
+export const MEMBERS = [
+  {
+    id: 1,
+    codename: 'Cequinho',
+    name: 'Agente Benny-oto',
+    rank: 'Investigador Sênior',
+    division: 'Campo',
+    status: 'em missão',
+  },
+  {
+    id: 2,
+    codename: 'Mestre',
+    name: 'Administrador',
+    rank: 'Comando Central',
+    division: 'Sistemas',
+    status: 'ativo',
+  },
+  {
+    id: 3,
+    codename: 'Foquinho',
+    name: 'Agente Hapollo',
+    rank: 'Primeira Escala',
+    division: 'Campo',
+    status: 'em missão',
+  },
+  {
+    id: 4,
+    codename: 'lele',
+    name: 'Agente Ryuma',
+    rank: 'Investigador Nato',
+    division: 'Analista de Campo',
+    status: 'em missão',
+  },
+  {
+    id: 5,
+    codename: 'roubin',
+    name: 'Agente Hili',
+    rank: 'Recruta',
+    division: 'Campo',
+    status: 'em missão',
+  },
+  {
+    id: 6,
+    codename: 'medroso',
+    name: 'Agente Kira',
+    rank: 'Recruta',
+    division: 'Campo',
+    status: 'em missão',
+ },
+];
+
