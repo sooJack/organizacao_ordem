@@ -33,6 +33,6 @@ export const NEWS = [
     excerpt:
       'Relato ainda não confirmado. Agentes próximos devem reportar qualquer observação semelhante imediatamente.',
     date: '26.07.2026',
-    author: 'Rede de Informantes',
+    author: 'Rede de Informantes Autorizados',
   },
 ];
