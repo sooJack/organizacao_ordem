@@ -12,7 +12,9 @@ export function AuthProvider({ children }) {
 
   function login(name, password) {
     const found = USERS.find(
-      (u) => u.name.toLowerCase() === name.trim().toLowerCase() && u.password === password,
+      (u) =>
+        u.name.toLowerCase() === name.trim().toLowerCase() &&
+        import.meta.env[u.passwordKey] === password,
     );
 
     if (found) {
