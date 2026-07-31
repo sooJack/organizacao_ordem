@@ -8,6 +8,7 @@ const LINKS = [
   { to: '/', label: 'Início', end: true },
   { to: '/jornal', label: 'Jornal' },
   { to: '/membros', label: 'Membros' },
+  { to: '/procurados', label: 'Procurados' },
   { to: '/missoes', label: 'Missões' },
 ];
 
