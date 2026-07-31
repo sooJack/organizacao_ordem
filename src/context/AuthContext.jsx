@@ -9,6 +9,7 @@ export function AuthProvider({ children }) {
     return saved ? JSON.parse(saved) : null;
   });
   const [error, setError] = useState('');
+  const [isWelcoming, setIsWelcoming] = useState(false);
 
   function login(name, password) {
     const found = USERS.find(
@@ -20,6 +21,7 @@ export function AuthProvider({ children }) {
     if (found) {
       setUser(found);
       setError('');
+      setIsWelcoming(true);
       sessionStorage.setItem('ordem_user', JSON.stringify(found));
       return true;
     }
@@ -30,11 +32,12 @@ export function AuthProvider({ children }) {
 
   function logout() {
     setUser(null);
+    setIsWelcoming(false);
     sessionStorage.removeItem('ordem_user');
   }
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, error }}>
+    <AuthContext.Provider value={{ user, login, logout, error, isWelcoming, setIsWelcoming }}>
       {children}
     </AuthContext.Provider>
   );

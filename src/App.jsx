@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar';
@@ -10,7 +11,13 @@ import Login from './components/Login';
 import './App.css';
 
 function App() {
-  const { user } = useAuth();
+  const { user, isWelcoming, setIsWelcoming } = useAuth();
+
+  useEffect(() => {
+    if (!isWelcoming) return undefined;
+    const timeoutId = window.setTimeout(() => setIsWelcoming(false), 12000);
+    return () => window.clearTimeout(timeoutId);
+  }, [isWelcoming, setIsWelcoming]);
 
   if (!user) {
     return <Login />;
@@ -21,6 +28,20 @@ function App() {
       <div className="grain-overlay" />
       <div className="scanlines" />
       <Navbar />
+
+      {isWelcoming && (
+        <div className="welcome-overlay" role="status" aria-live="polite">
+          <div className="welcome-noise" />
+          <div className="welcome-content">
+            <span className="welcome-kicker">// conexão autorizada</span>
+            <h1 className="welcome-title" data-text="BEM-VINDO AO SISTEMA">BEM-VINDO AO SISTEMA</h1>
+            <div className="welcome-loader" aria-hidden="true">
+              <span />
+            </div>
+            <span className="welcome-status">carregando arquivos internos...</span>
+          </div>
+        </div>
+      )}
 
       <main className="app-main">
         <Routes>

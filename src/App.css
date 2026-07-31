@@ -5,6 +5,173 @@
   color: var(--text-primary);
 }
 
+.welcome-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: rgb(7, 9, 11);
+  color: var(--text-primary);
+  animation: welcome-in 0.12s steps(2), welcome-out 0.2s 3.8s forwards;
+}
+
+.welcome-overlay::before,
+.welcome-overlay::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: '';
+}
+
+.welcome-overlay::before {
+  background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(255, 255, 255, 0.06) 4px);
+  mix-blend-mode: screen;
+  animation: tv-roll 0.35s steps(4) infinite;
+}
+
+.welcome-overlay::after {
+  background: linear-gradient(90deg, transparent 0 12%, rgba(255, 62, 62, 0.12) 12.2% 12.5%, transparent 12.8% 87%, rgba(66, 214, 205, 0.1) 87.2% 87.5%, transparent 87.8%);
+  animation: tv-jitter 0.2s steps(2) infinite;
+}
+
+.welcome-noise {
+  position: absolute;
+  inset: -50%;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: noise-shift 0.16s steps(2) infinite;
+}
+
+.welcome-content {
+  position: relative;
+  width: min(680px, 86vw);
+  text-align: center;
+  animation: welcome-content-glitch 0.22s steps(2) infinite;
+}
+
+.welcome-kicker,
+.welcome-status {
+  display: block;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.welcome-title {
+  position: relative;
+  margin: 0.8rem 0 1.4rem;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 7vw, 4.8rem);
+  letter-spacing: 2px;
+  line-height: 0.95;
+  text-shadow: 3px 0 rgba(255, 55, 55, 0.7), -3px 0 rgba(48, 210, 202, 0.7);
+}
+
+.welcome-title::before,
+.welcome-title::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: var(--text-primary);
+  content: attr(data-text);
+  pointer-events: none;
+}
+
+.welcome-title::before {
+  top: 2px;
+  clip-path: inset(20% 0 65% 0);
+  color: #ff4e5b;
+  transform: translateX(-4px);
+  animation: title-glitch 0.45s steps(2) infinite;
+}
+
+.welcome-title::after {
+  top: -2px;
+  clip-path: inset(70% 0 10% 0);
+  color: #4ed8d0;
+  transform: translateX(4px);
+  animation: title-glitch 0.32s steps(2) reverse infinite;
+}
+
+.welcome-loader {
+  width: min(360px, 72vw);
+  height: 5px;
+  margin: 0 auto 0.65rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.welcome-loader span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left;
+  animation: fake-loading 0.9s steps(5) forwards;
+}
+
+@keyframes welcome-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes welcome-out {
+  to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes fake-loading {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes tv-roll {
+  from { transform: translateY(-8px); }
+  to { transform: translateY(8px); }
+}
+
+@keyframes tv-jitter {
+  0%, 100% { transform: translate(0); }
+  50% { transform: translate(5px, -2px); }
+}
+
+@keyframes noise-shift {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(4%, -3%); }
+  100% { transform: translate(-3%, 4%); }
+}
+
+@keyframes welcome-content-glitch {
+  0%, 90%, 100% { transform: translate(0); }
+  92% { transform: translate(-3px, 1px); }
+  95% { transform: translate(3px, -1px); }
+}
+
+@keyframes title-glitch {
+  0%, 80%, 100% { opacity: 0; }
+  84% { opacity: 0.8; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-overlay,
+  .welcome-overlay::before,
+  .welcome-overlay::after,
+  .welcome-noise,
+  .welcome-content,
+  .welcome-title::before,
+  .welcome-title::after,
+  .welcome-loader span {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
+}
+
 .app-main {
   width: min(1200px, 100%);
   max-width: 1200px;
