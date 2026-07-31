@@ -3,7 +3,7 @@ import './MusicPlayer.css';
 
 const TRACK_NAME = 'ORDEM_THEME_TX01.WAV — Ambient Drone Sintetizado';
 const USE_AUDIO_FILE = true;
-const AUDIO_FILE_PATH = 'music/theme.mp3';
+const AUDIO_FILE_PATH = `${import.meta.env.BASE_URL}music/theme.mp3`;
 
 export default function MusicPlayer() {
   const [playing, setPlaying] = useState(false);

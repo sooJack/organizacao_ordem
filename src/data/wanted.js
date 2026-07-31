@@ -1,3 +1,5 @@
+const PUBLIC_BASE = import.meta.env.BASE_URL;
+
 export const WANTED = [
   {
     id: 1,
@@ -7,7 +9,7 @@ export const WANTED = [
     reward: 25,
     lastSeen: 'Subsolo 4, 26.07.2026',
     description: 'Suspeito de envolvimento em atividades ilegais envolvendo a Organização. Responsável pelo desaparecimento de três mapas de acesso restrito.',
-    image: '/procurados/o_sombra.png',
+    image: `${PUBLIC_BASE}procurados/o_sombra.png`,
   },
   {
     id: 2,
@@ -17,7 +19,7 @@ export const WANTED = [
     reward: 20,
     lastSeen: 'Subsolo 4, 26.07.2026',
     description: 'Suspeito de envolvimento em atividades ilegais envolvendo a Organização.',
-    image: '/procurados/ryu.png',
+    image: `${PUBLIC_BASE}procurados/ryu.png`,
   },
   {
     id: 3,
@@ -27,7 +29,7 @@ export const WANTED = [
     reward: 10,
     lastSeen: 'Subsolo 4, 26.07.2026',
     description: 'Suspeito de envolvimento em atividades ilegais envolvendo a Organização.',
-    image: '/procurados/noite-.png',
+    image: `${PUBLIC_BASE}procurados/noite-.png`,
   },
   {
     id: 4,
@@ -37,7 +39,7 @@ export const WANTED = [
     reward: 15,
     lastSeen: 'Subsolo 4, 26.07.2026',
     description: 'Suspeito de envolvimento em atividades ilegais envolvendo a Organização.',
-    image: '/procurados/blood-.png',
+    image: `${PUBLIC_BASE}procurados/blood-.png`,
   },
     {
     id: 5,
@@ -47,7 +49,7 @@ export const WANTED = [
     reward: 25,
     lastSeen: 'Cidade Sub 33, 31.05.2020',
     description: 'Suspeito de três assassinatos em série, com assinatura de símbolos astrológicos. Última aparição registrada em 2020.',
-    image: '/procurados/o_assassino.png',
+    image: `${PUBLIC_BASE}procurados/o_assassino.png`,
   },
     {
     id: 6,
@@ -57,6 +59,6 @@ export const WANTED = [
     reward: 2,
     lastSeen: 'Cidade Sub 33, 12.07.2026',
     description: 'Achada com uma alma de Nivel Extremo.',
-    image: '/procurados/rebbeca.png',
+    image: `${PUBLIC_BASE}procurados/rebbeca.png`,
   },
 ];
