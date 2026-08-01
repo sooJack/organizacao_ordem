@@ -23,4 +23,10 @@ export const USERS = [
     role: 'Investigador Amador',
     codename: 'corona',
   },
+     {
+    name: 'Agente Hili',
+    passwordKey: 'VITE_PASSWORD_HILI',
+    role: 'Investigador Amador',
+    codename: 'gomes',
+  },
 ];
