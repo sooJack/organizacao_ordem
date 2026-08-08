@@ -89,7 +89,7 @@ export const MEMBERS = [
  },
  {
     id: 12,
-    codename: 'covid',
+    codename: 'corona',
     name: 'Agente Kento',
     rank: 'Recruta',
     division: 'Campo',

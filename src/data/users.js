@@ -33,12 +33,12 @@ export const USERS = [
     name: 'Agente Ryuma',
     passwordKey: 'VITE_PASSWORD_RYUMA',
     role: 'Investigador Amador',
-    codename: 'gomes',
+    codename: 'lele',
   },
      {
     name: 'Agente Kento',
     passwordKey: 'VITE_PASSWORD_KENTO',
     role: 'Investigador Amador',
-    codename: 'gomes',
+    codename: 'corona',
   },
 ];
