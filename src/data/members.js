@@ -87,6 +87,14 @@ export const MEMBERS = [
     division: 'Perito de Campo',
     status: 'em missão',
  },
+ {
+    id: 12,
+    codename: 'covid',
+    name: 'Agente Kento',
+    rank: 'Recruta',
+    division: 'Campo',
+    status: 'em missão',
+  },
  
 ];
 
